@@ -14,16 +14,18 @@ const identity = {
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
 
 const happy = true
-const finished = false
+const finished = true
 const goal = 3
 
-const skillColor = 'navy'
 const fontWeight = 'bold'
 const textCase = 'capitalize'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
+  <style define:vars={{ fontWeight, textCase }}>
+    html.dark {
+      --skillColor: lightblue;
+    }
     h1 {
       color: purple;
       font-size: 4rem;
